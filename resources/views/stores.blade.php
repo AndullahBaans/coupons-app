@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كوبوناتي | تصفح المتاجر والخصومات</title>
+    <title>كوبوناتي | أفضل كوبونات خصم وأكواد تخفيض للمتاجر العربية 2026</title>
+    <meta name="description" content="كوبوناتي - أكبر موقع كوبونات خصم وأكواد تخفيض حصرية لأشهر المتاجر العربية مثل نون، أمازون، نمشي، شي إن، وأكثر. وفر حتى 70% على مشترياتك اليوم!">
+    <meta name="keywords" content="كوبونات خصم, أكواد تخفيض, كوبون نون, كود خصم أمازون, كوبونات السعودية, خصومات, عروض, توفير, كوبون, كود خصم, تخفيضات, متاجر عربية, كوبونات حصرية, أكواد خصم 2026">
+    <meta name="author" content="كوبوناتي">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta name="language" content="Arabic">
+    <meta name="geo.region" content="SA">
+    <meta name="geo.placename" content="Saudi Arabia">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="كوبوناتي | أفضل كوبونات خصم وأكواد تخفيض للمتاجر العربية">
+    <meta property="og:description" content="تصفح أقوى كوبونات الخصم والعروض الحصرية لأشهر المتاجر العربية. وفر حتى 70% على مشترياتك!">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:site_name" content="كوبوناتي">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="كوبوناتي | أفضل كوبونات خصم وأكواد تخفيض">
+    <meta name="twitter:description" content="أكبر موقع كوبونات خصم حصرية لأشهر المتاجر العربية. وفر حتى 70%!">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "كوبوناتي",
+        "alternateName": "Couponati",
+        "url": "{{ url('/') }}",
+        "description": "أكبر موقع كوبونات خصم وأكواد تخفيض حصرية لأشهر المتاجر العربية",
+        "inLanguage": "ar",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{{ url('/stores') }}?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
     
     <!-- Google Fonts: Tajawal & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

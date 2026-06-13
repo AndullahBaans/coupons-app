@@ -3,7 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كوبونات {{ $store->name }} | كوبوناتي</title>
+    <title>كود خصم {{ $store->name }} | كوبونات {{ $store->name }} حصرية {{ date('Y') }} - كوبوناتي</title>
+    <meta name="description" content="احصل على أقوى كود خصم {{ $store->name }} وكوبونات {{ $store->name }} الحصرية. {{ $store->coupons->count() }} كوبون فعال ومحدث. وفر حتى 70% على مشترياتك من {{ $store->name }} اليوم!">
+    <meta name="keywords" content="كود خصم {{ $store->name }}, كوبون {{ $store->name }}, كوبونات {{ $store->name }}, خصم {{ $store->name }}, عروض {{ $store->name }}, كود تخفيض {{ $store->name }}">
+    <meta name="author" content="كوبوناتي">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="كود خصم {{ $store->name }} | {{ $store->coupons->count() }} كوبون حصري - كوبوناتي">
+    <meta property="og:description" content="احصل على أقوى كوبونات {{ $store->name }} الحصرية. وفر حتى 70% على مشترياتك!">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:site_name" content="كوبوناتي">
+    
+    <!-- Schema.org Structured Data for Offers -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "كود خصم {{ $store->name }}",
+        "description": "كوبونات وأكواد خصم {{ $store->name }} الحصرية",
+        "url": "{{ url()->current() }}",
+        "mainEntity": {
+            "@type": "Store",
+            "name": "{{ $store->name }}",
+            @if($store->url)"url": "{{ $store->url }}",@endif
+            "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "{{ $store->coupons->count() }}",
+                "availability": "https://schema.org/InStock"
+            }
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "كوبوناتي", "item": "{{ url('/stores') }}"},
+                {"@type": "ListItem", "position": 2, "name": "{{ $store->name }}"}
+            ]
+        }
+    }
+    </script>
     
     <!-- Google Fonts: Tajawal & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
